@@ -3,7 +3,7 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
+<html lang="en" class="dark">
 <!--<![endif]-->
 
 <head>
@@ -11,11 +11,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <meta name="description"
+        content="Official documentation for all Minecraft mods and projects by Naizo. Available on CurseForge and Modrinth.">
+    <meta name="author" content="Naizo">
+    <meta name="keywords" content="Minecraft mods, Naizo mods, CurseForge, Modrinth, Minecraft documentation">
 
-    <title>Item Name | Documentation by Author Name</title>
+    <title>Mod Documentation | Projects by Naizo</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -41,11 +42,12 @@
 </head>
 
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"
+            aria-hidden="true"></i></button>
 
     <script>
         var mybutton = document.getElementById("myBtn");
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
             if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
                 mybutton.style.display = "block";
@@ -59,7 +61,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector('#mode').addEventListener('click',()=>{
+            document.querySelector('#mode').addEventListener('click', () => {
                 document.querySelector('html').classList.toggle('dark');
             })
         });
@@ -68,755 +70,476 @@
     </script>
 
     <div id="wrapper">
-
-        <div id="mode" >
+        <div id="mode">
             <div class="dark">
                 <svg aria-hidden="true" viewBox="0 0 512 512">
                     <title>lightmode</title>
-                    <path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+                    <path fill="currentColor"
+                        d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z">
+                    </path>
                 </svg>
             </div>
             <div class="light">
                 <svg aria-hidden="true" viewBox="0 0 512 512">
                     <title>darkmode</title>
-                    <path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path>
+                    <path fill="currentColor"
+                        d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z">
+                    </path>
                 </svg>
             </div>
         </div>
 
         <div class="container">
-
             <section id="top" class="section docs-heading">
-
                 <div class="row">
                     <div class="col-md-12">
                         <div class="big-title text-center">
-                            <h1>Your ThemeForest item Name</h1>
-                            <p class="lead">Your awesome theme / template documentation version 1.0</p>
+                            <h1>Naizo's Mods & Projects</h1>
+                            <p class="lead">Comprehensive documentation for all Minecraft mods and projects</p>
                         </div>
-                        <!-- end title -->
                     </div>
-                    <!-- end 12 -->
                 </div>
-                <!-- end row -->
-
                 <hr>
-
-            </section>
-            <!-- end section -->
-
-            <div class="row">
-
-                <div class="col-md-3">
-                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
-                        <ul class="nav">
-                            <li><a href="#line1">Getting Started</a></li>
-                            <li><a href="#line2">How to Install WordPress</a></li>
-                            <li><a href="#line3">How to Install Theme</a></li>
-                            <li><a href="#line4">Necessary Plugins</a></li>
-                            <li><a href="#line5">Creating Blog Pages</a></li>
-                            <li><a href="#line6">Revolution Slider</a></li>
-                            <li><a href="#line7">How to Use Option Panel</a>
-                                <ul class="nav">
-                                    <li><a href="#line7_1">General Options</a></li>
-                                    <li><a href="#line7_2">Style Options</a></li>
-                                    <li><a href="#line7_3">Header Options</a></li>
-                                    <li><a href="#line7_4">Font Options</a></li>
-                                    <li><a href="#line7_5">Slider Options</a></li>
-                                    <li><a href="#line7_6">Page Options</a></li>
-                                    <li><a href="#line7_7">Import & Export</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#line8">Support Desk</a></li>
-                            <li><a href="#line9">Files & Sources</a></li>
-                            <li><a href="#line10">Version History (Changelog)</a></li>
-                            <li><a href="#line11">Copyright and license</a></li>
-                        </ul>
-                    </nav >
+            
+                <!-- Buttons for Mods -->
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <a href="https://meherbensalem.github.io" class="btn btn-primary mx-2" role="button">Ascendant Mobs</a>
+                        <a href="" class="btn btn-primary mx-2" role="button">Mob Lootbags (WIP)</a>
+                        <a href="" class="btn btn-primary mx-2" role="button">Memories Of The Past (WIP)</a>
+                        <a href="" class="btn btn-primary mx-2" role="button">Other Projects (WIP)</a>
+                        <a href="" class="btn btn-primary mx-2" role="button">About Me (WIP)</a>
+                        <!-- Add more buttons as needed -->
+                    </div>
                 </div>
-                <div class="col-md-9">
-                    <section class="welcome">
+            </section>
+            
+            <div class="row">
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200"
+                        role="navigation">
+                        <ul class="nav">
+                            <li><a href="#intro">Introduction</li>
+                            <li><a href="#config">Configurations</li>
+                            <li><a href="#changelog">Changelog</li>
+                            <li><a href="#help">Support & Help</li>
+                            <li><a href="#files">Files & Sources</li>
+                        </ul>
+                    </nav>
+                </div>
 
+                <div class="col-md-9" id="intro">
+                    <section class="welcome">
                         <div class="row">
                             <div class="col-md-12 left-align">
-                               <h2 class="dark-text">Introduction<hr></h2>
+                                <h2 class="dark-text">Introduction
+                                    <hr>
+                                </h2>
                                 <div class="row">
-
                                     <div class="col-md-12 full">
                                         <div class="intro1">
                                             <ul>
-                                                <li><strong>Item Name : </strong>Gather Responsive Event Template</li>
-                                                <li><strong>Item Version : </strong> v 1.0</li>
-                                                <li><strong>Author  : </strong> <a href="http://themeforest.net/user/surjithctly" target="_blank">Surjith S M</a></li>
-                                                <li><strong>Support Forum : </strong> <a href="https://support.surjithctly.in/forums" target="_blank">https://support.surjithctly.in/forums</a></li>
-                                                <li><strong>License : </strong> <a href="#" target="_blank">Un License</a></li>
+                                                <li><strong>Project Name: </strong>Ascendant Mobs</li>
+                                                <li><strong>Version: </strong> v0.6.0</li>
+                                                <li><strong>Author: </strong> Naizo</li>
+                                                <li><strong>Available on CurseForge: </strong> <a
+                                                        href="https://www.curseforge.com/minecraft/mc-mods/ascendant-mobs"
+                                                        target="_blank">Click here</a></li>
+                                                <li><strong>Available on Modrinth: </strong> <a
+                                                        href="https://modrinth.com/mod/ascendant-mobs"
+                                                        target="_blank">Click here</a></li>
+                                                <li><strong>License: </strong> <a href="#" target="_blank">ARR</a></li>
                                             </ul>
                                         </div>
 
                                         <hr>
                                         <div>
-                                            <p>First of all, Thank you so much for purchasing this template and for being my loyal customer.
-                                                <strong>You are awesome!</strong>
-                                                <br> You are entitled to get free lifetime updates to this product + exceptional support from the author directly.
+                                            <p>First of all, thank you so much for taking the time to explore the
+                                                documentation for the Ascendant Mobs mod!
+                                                <strong>Your support is appreciated!</strong><br>
+                                                <br> You are entitled to free updates to this mod, along with dedicated
+                                                support from the mod developer.
+                                                And this documentation will guide you through the features and
+                                                customization options of Ascendant Mobs.
+                                                Please review it carefully to understand how this mod enhances your
+                                                Minecraft experience.
                                             </p>
 
-                                            <p>This documentation is to help you regarding each step of customization. Please go through the documentation carefully to understand how this template is made and how to edit this properly. Basic HTML and CSS knowledge is required to customize this template. You may learn basics from <a href="http://www.w3schools.com/" target="_blank">w3schools</a>, <a href="https://developer.mozilla.org/" target="_blank">Developer.mozilla</a> and <a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank">learn.shayhowe</a>. </p>
-
-                                            <h4>Requirements</h4>
-                                            <p>You will need the following sofwares to customize this template.</p>
-                                            <ol>
-                                                <li>Code Editing Software (eg: Dreamweaver, Sublime Text or Notepad)</li>
-                                                <li>Web Browser for testing (eg: Google Chrome or Mozilla Firefox)</li>
-                                                <li>FTP Tool to upload files to Server (eg: <a href="https://filezilla-project.org/download.php?type=client" target="_blank">FileZilla</a>) </li>
-                                            </ol>
                                             <div class="intro2 clearfix">
-                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful while editing the template. If not edited properly, the design layout may break completely.
-                                                    <br> No support is provided for faulty customization.
+                                                <h4>Important Note</h4>
+                                                <p><i class="fa fa-exclamation-triangle"></i> Be mindful of editing the
+                                                    mod's configuration files, as incorrect changes may cause unintended
+                                                    behavior.
                                                 </p>
                                             </div>
 
+                                            <h4>Requirements</h4>
+                                            <p>You'll need the following software to customize this mod:</p>
+                                            <ol>
+                                                <li>A Text editor (e.g., Visual Studio Code, Notepad , ...)</li>
+                                                <li>Minecraft Forge or Fabric to run the mod</li>
+                                            </ol>
                                         </div>
                                     </div>
-
                                 </div>
-                                <!-- end row -->
                             </div>
-                        </div>
                     </section>
 
-                    <section id="line1" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Getting Started <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
+                    <section id="config" class="section" style="padding: 0px;">
+                        <h2 class="dark-text">Configurations
+                            <hr>
+                        </h2>
                         <div class="row">
                             <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                <p>Welcome to our guide on editing the configuration files for the Ascendant Mobs mod.
+                                    This tutorial will help you understand how to adjust settings that control mob
+                                    difficulty as you explore further into the Minecraft world.</p>
 
-                                <h4>Bootstrap Grid System</h4>
-
-                                <pre class="brush: html; highlight: [2,4]">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
-                            </div></pre>
-
-                                <p>Our you can use the grid system with 2 columns like this;</p>
+                                <h4>Distance Scale Settings</h4>
+                                <p><strong>main_config.toml</strong> file</p>
+                                <p>The <code>scale_distance</code> setting controls how mob levels increase as you move
+                                    away from the spawn point:</p>
 
                                 <pre class="brush: html">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
-                            </div>
-                         </pre>
+                    [Distance Scale Settings]
+                    #Recommended over 25 000
+                    scale_distance = 55000.0
+                    #The scale type can be 'vertical', 'horizontal', 'both', 'random' or 'time'
+                    scale_type = "time"
+                    day_factor = 1.0
+                    random_min = 0.0
+                    random_max = 200.0
+                                </pre>
 
-                                <p>Our you can use the grid system with 3 columns like this;</p>
+                                <p>In this configuration:</p>
+                                <ul>
+                                    <li><strong><code>scale_distance</code></strong> is set to 55,000 blocks, meaning
+                                        mobs will gradually become stronger as you move further from the spawn point.
+                                        Adjust this value to balance the game’s challenge level.</li>
+                                    <li><strong><code>scale_type</code></strong> determines the method of scaling. You
+                                        can choose from:
+                                        <ul>
+                                            <li><code>- vertical</code>: Scales mob levels based on vertical distance
+                                                from world spawn point (Y-axis).</li>
+                                            <li><code>- horizontal</code>: Scales mob levels based on horizontal
+                                                distance from world spawn point (X and Z axes).</li>
+                                            <li><code>- both</code>: Scales mob levels based on distance from world
+                                                spawn point in all directions (X, Y, and Z axes).</li>
+                                            <li><code>- random</code>: Applies a random scaling factor within a
+                                                specified range.</li>
+                                            <li><code>- time</code>: Adjusts mob levels based on the in-game time or
+                                                player's exploration duration.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong><code>day_factor</code>, <code>random_min</code>, and
+                                            <code>random_max</code></strong> further fine-tune the scaling effect.</li>
+                                </ul>
+
+                                <h4>Mob Levels Settings</h4>
+                                <p>Control mob base levels and scaling factors here:</p>
 
                                 <pre class="brush: html">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
+                    [Mobs Levels Settings]
+                    base_level = 0.0
+                    scale_factor = 0.5
+                    base_level_nether = 50.0
+                    base_level_end = 100.0
+                    random_effects = true
+                    random_effects_level = 100.0
+                    random_effects_chance = 10.0
+                    base_level_territory = 75.0
+                    max_level_overworld = 75.0
+                    max_level_nether = 100.0
+                    max_level_end = 200.0
+                                </pre>
+
+                                <p>In this configuration:</p>
+                                <ul>
+                                    <li><code>base_level</code> sets the default level of mobs near the spawn.</li>
+                                    <li><code>scale_factor</code> controls the increase in mob levels with distance.
+                                    </li>
+                                    <li><code>base_level_nether</code> and <code>base_level_end</code> define base
+                                        levels for the Nether and End dimensions, respectively.</li>
+                                    <li><code>random_effects</code> enables random buffs for mobs at certain levels.
+                                        Customize the effects' level and chance with <code>random_effects_level</code>
+                                        and <code>random_effects_chance</code>.</li>
+                                    <li><code>max_level_overworld</code>, <code>max_level_nether</code>, and
+                                        <code>max_level_end</code> set maximum levels for mobs in each dimension.
+                                    </li>
+                                </ul>
+
+                                <h4>Blacklist Settings</h4>
+                                <p>To exclude specific mobs from the leveling system, use the
+                                    <strong>list_config.toml</strong> file:
+                                </p>
+
+                                <pre class="brush: html">
+                    [Blacklist]
+                    #write the registry name of the entities
+                    banned = ["minecraft:zombie"]
+                    death_messages = []
+                                </pre>
+
+                                <p>In this configuration:</p>
+                                <ul>
+                                    <li><code>banned</code> lists entities to exclude from leveling. In this example,
+                                        zombies are banned.</li>
+                                    <li><code>death_messages</code> allows exclusion of messages shown when banned mobs
+                                        are defeated.</li>
+                                </ul>
                             </div>
-                         </pre>
-                            </div>
-                            <!-- end col -->
                         </div>
-                        <!-- end row -->
-
                     </section>
-                    <!-- end section -->
 
-                    <section id="line2" class="section">
-
+                    <section id="changelog" class="section" style="padding: 0px;">
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">How to Install WordPress <hr></h2>
+                                <h2 class="dark-text">Version History (Changelog)
+                                    <hr>
+                                </h2>
                             </div>
-                            <!-- end col -->
                         </div>
-                        <!-- end row -->
-
-                        <div class="intro2 clearfix">
-                            <p><i class="fa fa-wordpress"></i> Lorem the It is a long established fact that a reader will be distracted..
-                                <br> Please read more about WordPress here. <a href="#">WordPress Installation via FTP.</a> </p>
-                        </div>
-
-                        <hr>
-
-                        <h4>Upload via WordPress Admin</h4>
-
-                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-                        <hr>
                         <div class="row">
-                            <div class="col-md-8 col-md-offset-2">
-                                <div class="media">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </section>
-                    <!-- end section -->
-
-                    <section id="line3" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">How to Install Theme <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <h4>Upload via WordPress Admin</h4>
-
-                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-
-                        <hr>
-
-                        <h4>Upload via FTP Server</h4>
-
-                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="media">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yQnQyI5WlKs" frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
-                                <div class="media">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/z0kEVwJB_go" frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </section>
-                    <!-- end section -->
-
-                    <section id="line4" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Necessary Plugins <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin1.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #1</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin2.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #2</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin3.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #3</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
                             <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                                <p>Once again, thank you so much for using the Ascendant Mobs mod. As mentioned earlier,
+                                    I'd be glad to help you if you have any questions relating to this mod. No
+                                    guarantees, but I'll do my best to assist. If you have a more general question
+                                    relating to Minecraft mods, you might consider visiting the forums or our Discord
+                                    server and asking your question in the appropriate section.</p>
+                                <hr>
+                                <h4>Changelog</h4>
+                                <div style="max-height: 800px; overflow-y: scroll;">
+                                    <pre class="brush: html">
+                        =============================================
+                        Changelog 0.0.1
+                        =============================================
+                        
+                        [NEW] Dynamic Leveling System:
+                        
+                            - All mobs now have levels that scale based on distance from spawn
+                            - Higher-level mobs have increased health and damage, making each encounter more challenging
+                        
+                        [NEW] Added Configuration file to control:
+                            - Scale distance
+                            - Base Level
+                            - Scale factor
+                            - Health modifier
+                            - Damage modifier
+                        
+                        =============================================
+                        Changelog 0.1.0
+                        =============================================
+                        
+                            - Added Blacklist Config if you don't want some mobs to get levels
+                            - Option to show Display Tag or not
+                            - Fixed level text bug
+                            - Fixed a bug which caused mobs to re-level every time you reload the world
+                            - Fixed a bug which showed the mod author name as UwU
+                        
+                        =============================================
+                        Changelog 0.2.0
+                        =============================================
+                        
+                        [NEW] Mobs now scale based on dimension:
+                            - Overworld starts at Level 0
+                            - Nether starts at Level 50
+                            - End starts at Level 100
+                        
+                        [NEW] Mobs now have potion effects at configurable levels
+                        
+                        [NEW] Added new configuration options:
+                            - base_level_end
+                            - base_level_nether
+                            - random_effects
+                            - random_effects_level
+                            - random_effects_chance
+                            - strength_chance
+                            - speed_chance
+                            - resistance_chance
+                        
+                        =============================================
+                        Changelog 0.3.0
+                        =============================================
+                        
+                            - Added Protection to mobs level
+                            - Added Speed to mobs levels
+                            - Added NBT tag "am_lvl" to entities
+                            - Extra XP based on level
+                            - Added configurations for all of the above changes:
+                                - damage_modifier
+                                - health_modifier
+                                - protection_modifier
+                                - speed_modifier
+                                - xp_modifier
+                        
+                        =============================================
+                        Changelog 0.4.0
+                        =============================================
+                        
+                            - Reduced ms 0.1 - 0.3 by default
+                            - Distance based on Z-axis
+                            - Added configuration for the X, Y, and Z axes
+                            - Special death messages
+                        
+                        =============================================
+                        Changelog 0.5.0
+                        =============================================
+                        
+                        [NEW] Added new block: Territorial Soil Block
+                        [NEW] Added new biome: The Territorial
+                        [NEW] Added 2 new valuable loot structures in the new biome
+                        [NEW] Mobs will follow a leader in the new biome
+                            - If the leader dies, minions will get a weakness effect until they find a new leader
+                            - Minimum level of mobs in this area is 75
+                        
+                        =============================================
+                        Changelog 0.5.1
+                        =============================================
+                        
+                        [NEW] Introduced **leader_radius** in config files to allow customization of the leader search radius
+                        [NEW] Added **base_level_territory** in config files to set the minimum level for territory biomes
+                        [UPDATE] Adjusted the default leader spawn area to 1 leader per 30 blocks
+                        [UPDATE] Reduced the spawn rate of structures in territories to 1 per 15 chunks
+                        [BUG FIX] Resolved an issue where breaking a chest in the new biome would cause unintended behavior
+                        
+                        =============================================
+                        Changelog 0.6.0
+                        =============================================
+                        
+                        [NEW] Added compatibility with "Memories of the Past" mod levels (It's recommended to adjust the scale factor to 1 for optimal performance)
+                        [NEW] Scale type adjustments for mobs (Time, Distance, MOTP, or Random):
+                            - Time-Based Difficulty: Added a difficulty setting based on time
+                            - Day Factor: New option to use a day factor for mob level-ups (Default is every 1 day)
+                            - Random Difficulty: Introduced a random difficulty setting
+                        
+                        [NEW] Dimension-Specific Max Levels
+                            - Configurable maximum level options for each dimension: Overworld, Nether, and End
+                        
+                        [NEW] Added a calendar item that displays the current day in Minecraft
+                        
+                        [UPDATED] Territory Block Texture: Updated the texture for the territory block
+                        
+                        =============================================
+                        Changelog 0.6.0 - [1.18.2]
+                        =============================================
+                        
+                        Due to high demand and requests for the 1.18.2 version, we have released a test version with the following changes:
+                        
+                        [UPDATED] Leader and Minions: Leaders and minions can now only be found in the desert biome.
+                        
+                        [DISABLED] Territory Biome: The territory biome has been temporarily disabled in this version.
+                        
+                        [DISABLED] Structure Generations: All structure generations have been turned off.
+                        
+                        We appreciate your feedback and patience as we continue to improve the mod. Stay tuned for further updates!
+                        
+                        If you encounter any issues, please report them in the [Discord Server](https://discord.gg/SAmd9fhNhr)
+                                </pre>
                                 </div>
                             </div>
                         </div>
-                        <!-- end row -->
-
                     </section>
-                    <!-- end section -->
 
-                    <section id="line5" class="section">
-
+                    <section id="support" class="section" style="padding: 0px;">
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Creating Blog Pages <hr></h2>
+                                <h2 class="dark-text">Support Desk
+                                    <hr>
+                                </h2>
                             </div>
-                            <!-- end col -->
                         </div>
-                        <!-- end row -->
-
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            </div>
-
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                                <h4 id="line5_1">WordPress Blog Page -</h4>
-                                <ul>
-                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
-                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
-                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
-                                </ul>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                                <h4 id="line5_2">Blog Post Sections -</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                                <ul>
-                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
-                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
-                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
-                                </ul>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                                <h4 id="line5_3">Create Blog Gallery -</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                                <ul>
-                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
-                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
-                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
-                                </ul>
-                            </div>
-                            <!-- end col -->
-
-                        </div>
-                        <!-- end row -->
-
-                    </section>
-                    <!-- end section -->
-
-                    <section id="line6" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">How to Install Revolution Slider <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            </div>
-
-                            <div class="col-md-6">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                                <h4>Installation Slider</h4>
-                                <ul>
-                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
-                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
-                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
-                                </ul>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                                <h4>Updating Slider</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                                <ul>
-                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
-                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
-                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
-                                </ul>
-                            </div>
-                            <!-- end col -->
-
-                        </div>
-                        <!-- end row -->
-
-                    </section>
-                    <!-- end section -->
-
-                    <section id="line7" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">How to Use Option Panel <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_1">General Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_2">Style Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_3">Header Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_4">Font Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_5">Slider Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_6">Page Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <hr>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
-                            </div>
-
-                            <div class="col-md-8">
-                                <h4 id="line7_7">Import & Export Options - </h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                    </section>
-                    <!-- end section -->
-
-                    <section id="line8" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Support Desk <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
                         <div class="row">
                             <div class="col-md-6">
-                                <p>Please remember you have purchased a very affordable theme and you have not paid for a full-time web design agency. Occasionally we will help with small tweaks, but these requests will be put on a lower priority due to their nature. Support is also 100% optional and we provide it for your connivence, so please be patient, polite and respectful.</p>
+                                <p>Welcome to the support desk for our Minecraft mod! While we strive to provide helpful
+                                    assistance, please note that support may be limited compared to a full-time support
+                                    team. We prioritize general questions and issues, but more complex requests might
+                                    take additional time. Your patience and understanding are greatly appreciated.</p>
 
-                                <p>Please visit our <a href="http://themeforest.net/user/yourusername"><strong>profile page</strong></a> or ask question <a href="mailto:yourusername@gmail.com">@yourusername</a></p>
-
-                                <strong>Support for my items includes:</strong>
+                                <p>If you need assistance, please visit our <a
+                                        href="https://discord.gg/SAmd9fhNhr"><strong>Discord server</strong></a> for
+                                    community support and updates.</p>
+                                <strong>Support for our Minecraft mod includes:</strong>
                                 <ul>
-                                    <li>* Responding to questions or problems regarding the item and its features</li>
-                                    <li>* Fixing bugs and reported issues</li>
-                                    <li>* Providing updates to ensure compatibility with new software versions</li>
+                                    <li>* Answering questions about mod features and gameplay mechanics</li>
+                                    <li>* Fixing bugs and addressing reported issues</li>
+                                    <li>* Providing updates and compatibility fixes with new Minecraft versions</li>
                                 </ul>
-                                <strong>Item support does not include:</strong>
+                                <strong>Support does not include:</strong>
                                 <ul>
-                                    <li>* Customization and installation services</li>
-                                    <li>* Support for third party software and plug-ins</li>
+                                    <li>* Custom modifications or integrations with other mods</li>
+                                    <li>* Assistance with third-party tools or mods</li>
                                 </ul>
-
                             </div>
-
                             <div class="col-md-6">
                                 <strong>Before seeking support, please...</strong>
                                 <ul>
-                                    <li>* Make sure your question is a valid Theme Issue and not a customization request.</li>
-                                    <li>* Make sure you have read through the documentation and any related video guides before asking support on how to accomplish a task.</li>
-                                    <li>* Make sure to double check the theme FAQs.</li>
-                                    <li>* Try disabling any active plugins to make sure there isn't a conflict with a plugin. And if there is this way you can let us know.</li>
-                                    <li>* If you have customized your theme and now have an issue, back-track to make sure you didn't make a mistake. If you have made changes and can't find the issue, please provide us with your changelog.</li>
-                                    <li>* Almost 80% of the time we find that the solution to people's issues can be solved with a simple "Google Search". You might want to try that before seeking support. You might be able to fix the issue yourself much quicker than we can respond to your request.</li>
-                                    <li>* Make sure to state the name of the theme you are having issues with when requesting support via ThemeForest.</li>
+                                    <li>* Verify that your issue is related to the mod and not caused by other mods or
+                                        external factors.</li>
+                                    <li>* Review the mod documentation and any related guides or tutorials.</li>
+                                    <li>* Check our mod's FAQ and troubleshooting sections for solutions to common
+                                        problems.</li>
+                                    <li>* Try disabling other mods to identify potential conflicts.</li>
+                                    <li>* If you've made custom changes to the mod, ensure they are not causing the
+                                        issue and provide a detailed changelog if needed.</li>
+                                    <li>* A lot of common issues can be resolved with a quick online search. You might
+                                        find a solution faster this way.</li>
+                                    <li>* When requesting support, provide specific details about the issue and any
+                                        error messages or logs if applicable.</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- end row -->
-
                     </section>
-                    <!-- end section -->
 
-                    <section id="line9" class="section">
-
+                    <section id="files" class="section" style="padding: 0px;"></section>
                         <div class="row">
                             <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Files & Sources <hr></h2>
+                                <h2 class="dark-text">Files & Sources
+                                    <hr>
+                                </h2>
                             </div>
-                            <!-- end col -->
                         </div>
-                        <!-- end row -->
-
                         <div class="row">
                             <div class="col-md-6">
-                                <strong>Included Stylesheets</strong>
-
-                                <p>These are the primary CSS files used for general front-end styling. Use these to customize your theme even further. All included JavaScript codes under <strong>yourthemename/css/</strong></p>
-
+                                <strong>CurseForge</strong>
                                 <ul>
-                                    <li>1. style.css - Primary stylesheet</li>
-                                    <li>2. bootstrap.css - Bootstrap stylesheet</li>
-                                    <li>3. owl-carousel.css - OWL Carousel</li>
-                                    <li>4. fontawesome.css - FontAwesome Font Icons stylesheet</li>
-                                    <li>5. custom.css - Pathos Color Schemes stylesheet</li>
-                                    <li>6. prettyPhoto.css - Lightbox effect css file</li>
-                                    <li>7. flexslider.css - Flexslider css file</li>
-                                    <li>8. et-line.css - Elegant icons css file</li>
-                                    <li>9. carousel.css - OWL Carousel css file</li>
-                                    <li>10. animate.css - CSS3 animations css file</li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/x64znD93"> AM - Mobs
+                                            leveling system 0.6.0 [1.21.1]] [Latest]</a></li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/4HB3dKfi"> AM - Mobs
+                                            leveling system 0.6.0 [1.20.1] </a></li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/0.6.0"> AM - Mobs
+                                            leveling system 0.6.0 [1.19.2] </a></li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/DuTVYM2q"> AM - Mobs
+                                            leveling system 0.6.0 [1.18.2] </a></li>
                                 </ul>
-
                             </div>
-
                             <div class="col-md-6">
-                                <strong>Included JavaScript</strong>
-
-                                <p>These are the various attribution inks to the Javascript files included or modified to work with in this theme. All included JavaScript codes under <strong>yourthemename/js/</strong></p>
-
+                                <strong>Modrinth</strong>
                                 <ul>
-                                    <li>1. bootstrap.js - Bootstrap JavaScript</li>
-                                    <li>2. custom.js - All JavaScript Plugins</li>
-                                    <li>3. retina.js - Retina JavaScript</li>
-                                    <li>4. jquery.js - Base JavaScript</li>
-                                    <li>5. prettyPhoto.js - Lightbox JavaScript</li>
-                                    <li>6. owl-carousel.js - Lightbox JavaScript</li>
-                                    <li>7. revslider.js - Revolution Slider JavaScript</li>
-                                    <li>8. flexslider.js - Flexslider JavaScript</li>
-                                    <li>9. awesome-grid.nin.js - Awesome grid portfolio JavaScript</li>
-                                    <li>10. circle.js - Coming soon page JavaScript</li>
-                                    <li>11. contact.js - Contact form validate JavaScript</li>
-                                    <li>12. isotope.js - Masonry Portfolio JavaScript</li>
-                                    <li>13. progress.js - Progress bar JavaScript</li>
-                                    <li>14. rotate.js - Text rotate effect JavaScript</li>
-                                    <li>15. wow.js - CSS3 animation JavaScript</li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/x64znD93"> AM - Mobs
+                                            leveling system 0.6.0 [1.21.1]] [Latest]</a></li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/4HB3dKfi"> AM - Mobs
+                                            leveling system 0.6.0 [1.20.1] </a></li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/0.6.0"> AM - Mobs
+                                            leveling system 0.6.0 [1.19.2] </a></li>
+                                    <li><a href="https://modrinth.com/mod/ascendant-mobs/version/DuTVYM2q"> AM - Mobs
+                                            leveling system 0.6.0 [1.18.2] </a></li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- end row -->
-
                     </section>
-                    <!-- end section -->
 
-                    <section id="line10" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Version History (Changelog) <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-md-12">
-
-                                <p>You can find the version history (changelog.txt) file on <strong>yourthemename-full.zip</strong> folder or you can check changelog on theme sale page.</p>
-                                <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
-
-                                <hr>
-
-                                <h4>Changelog</h4>
-
-                                <pre class="brush: html">
-
-                                        -----------------------------------------------------------------------------------------
-                                        Version 3.8.4 - May 7th, 2015
-                                        -----------------------------------------------------------------------------------------
-
-                                        - new revolution slider plugin version
-                                        - fixed security issue with xss vulnerability
-                                        - improved demo importer for certain server environments
-                                        - updated WooCommerce template files for the outdated message in system status
-                                        - added suhosin check in system status 
-                                        - added information that explains ZipArchive is required on your server for importing demos 
-                                        - portfolio Grid template improvement
-                                        - added more information to demo popup message for individual demo requirements
-                                        - RTL style improvements
-                                        - breadcrumb function improved for various areas
-
-                                        -----------------------------------------------------------------------------------------
-                                        Version 3.8.3 - May 7th, 2015
-                                        -----------------------------------------------------------------------------------------
-                                        - fixed responsive / retina issue for larger logos
-                                        - fusion slider now uses responsive headings all the time
-                                        - dropped custom Avada styles for select boxes in IE since it is not supported
-                                        - fixed compatibility issue with Category Order and Taxonomy Terms Order plugin
-                                        - fixed issue of full width background being affected by padding options
-                                        - tested and fixed hellobar issue 
-                                        - typography settings now apply to single post pages
-                                        - improved smooth scroll in certain situations
-                                        - youtube & vimeo videos will show at normal size in light box as long as video embed link is not used
-                                        - fixed issue of â€œfixedâ€ featured image mode not working for carousels / recent work
-                                        - fixed issue of header tagline font not working with font options
-
-                                        -----------------------------------------------------------------------------------------
-                                        Version 3.8.2 - May 7th, 2015
-                                        -----------------------------------------------------------------------------------------
-                                        - fixed formatting issues with Turkish language files 
-                                        - letter spacing menu option improvement
-                                        - improved fusion slider max content width setting
-                                        - removed the â€œdisable first featured image on productsâ€ setting since it does not apply
-                                        - improved portfolio featured image loading
-                                        - removed encoding from tracking code, space before head, space before body, and custom CSS to stop it from parsing code within TO and removing special characters e.g. +
-                                        - woo login box now shows login fields for logged out users
-                                        - woo cart / my account links now show on mobile 
-                                        - fixed button styling issue with gravity forms
-
-
-                                      </pre>
-
-                            </div>
-                        </div>
-                        <!-- end row -->
-
-                    </section>
-                    <!-- end section -->
-
-                    <section id="line11" class="section">
-
-                        <div class="row">
-                            <div class="col-md-12 left-align">
-                                <h2 class="dark-text">Copyright and license <hr></h2>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                
-                                <p>Code released under the <a href="#" target="_blank">Un License</a> License.</p>                        
-                                <p>For more information about copyright and license check <a href=" https://choosealicense.com/licenses/unlicense/" target="_blank">choosealicense.com</a>.</p>
-                            
-                            </div>
-                        </div>
-                        <!-- end row -->
-
-                    </section>
-                    <!-- end section -->
                 </div>
-                <!-- // end .col -->
-
             </div>
-            <!-- // end .row -->
-
         </div>
-        <!-- // end container -->
-
     </div>
-    <!-- end wrapper -->
-
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/retina.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
-
-    <!-- CUSTOM PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/main.js"></script>
-
     <script src="js/syntax-highlighter/scripts/shCore.js"></script>
     <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
     <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
