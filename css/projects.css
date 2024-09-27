@@ -196,14 +196,6 @@ nav ul li a {
     height: 50vh;
 }
 
-.background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-}
-
 .project-category {
     padding: 40px;
     background-color: #f4f4f4;
@@ -253,4 +245,53 @@ nav ul li a {
     color: white;
     text-decoration: none;
     border-radius: 4px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 15px;
+    vertical-align: middle;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.table td {
+    background-color: #fff;
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table td img {
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.table td img:hover {
+    transform: scale(1.1);
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the whole section */
+    z-index: -1; /* Puts the video behind the content */
 }
