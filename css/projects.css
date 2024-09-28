@@ -217,7 +217,7 @@ nav ul li a {
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
-    width: 300px;
+    width: calc(33.33% - 20px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -249,14 +249,14 @@ nav ul li a {
 
 .table {
     width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
+    margin-bottom: 1.5rem;
     border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
 .table th, .table td {
     padding: 15px;
-    vertical-align: middle;
+    text-align: center;
     border: 1px solid #dee2e6;
 }
 
@@ -264,20 +264,28 @@ nav ul li a {
     background-color: #343a40;
     color: #fff;
     font-weight: 700;
+    text-transform: uppercase; /* Capitalize headings */
+    letter-spacing: 1px; /* Add spacing to the header text */
     text-align: center;
 }
 
 .table td {
     background-color: #fff;
-    text-align: center;
+    color: #333;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row color */
 }
 
 .table tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Hover effect */
 }
 
 .table td img {
     border-radius: 5px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -285,6 +293,15 @@ nav ul li a {
 .table td img:hover {
     transform: scale(1.1);
 }
+
+.table caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    font-style: italic; /* Optional caption styling */
+}
+
 
 .background-video {
     position: absolute;
@@ -340,4 +357,69 @@ nav ul li a {
 .video p {
     margin-top: 10px;
     font-size: 16px;
+}
+
+/* Container for the buttons */
+.navigation-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    margin-bottom: 20px; /* Space below the buttons */
+}
+
+/* Button Style */
+.nav-button {
+    display: flex; /* Use flex to align items */
+    align-items: center; /* Center items vertically */
+    background: #f8f9fa; /* Light background color */
+    color: #343a40; /* Dark text color */
+    padding: 12px 20px; /* Space around text */
+    margin: 10px; /* Space between buttons */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    text-decoration: none; /* Remove underline from links */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+    border: none; /* Remove default button border */
+}
+
+/* Icon Style */
+.nav-icon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+    color: #007bff; /* Icon color */
+}
+
+/* Hover Effects */
+.nav-button:hover {
+    background: #e2e6ea; /* Darker background on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Active State */
+.nav-button:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
