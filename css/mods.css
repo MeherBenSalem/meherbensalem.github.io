@@ -169,3 +169,57 @@ header nav ul li a:hover {
 .discord-link:hover {
     color: #404EED;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items */
+        padding: 10px 20px; /* Reduced padding */
+    }
+
+    header .logo {
+        font-size: 20px; /* Adjust logo size */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items */
+        margin-top: 10px; /* Spacing between logo and nav */
+    }
+
+    header nav ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    .project {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Max width for project cards */
+    }
+
+    .project-title {
+        font-size: 1.5rem; /* Adjust title size */
+    }
+
+    .btn {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 6px; /* Reduced padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 1.2rem; /* Further adjust title size */
+    }
+
+    .project h3 {
+        font-size: 1rem; /* Smaller heading */
+    }
+
+    .project p {
+        font-size: 0.8rem; /* Smaller paragraph */
+    }
+
+    .project {
+        padding: 15px; /* Reduce padding */
+    }
+}

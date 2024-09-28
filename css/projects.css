@@ -117,85 +117,6 @@ nav ul li a:hover {
     color: #404EED;
 }
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-/* Background Video Styling */
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the whole section */
-    z-index: -1; /* Puts the video behind the content */
-}
-
-/* Content Box Styling */
-.content-box {
-    position: relative;
-    z-index: 1; /* Puts the content on top of the video */
-    color: white;
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to make the text more readable */
-}
-
-.content-box h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.content-box p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.content-box button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #5865F2; /* Discord color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.content-box button:hover {
-    background-color: #404EED;
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.hero {
-    position: relative;
-    height: 50vh;
-}
-
 .project-category {
     padding: 40px;
     background-color: #f4f4f4;
@@ -251,7 +172,7 @@ nav ul li a {
     width: 100%;
     margin-bottom: 1.5rem;
     border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .table th, .table td {
@@ -264,8 +185,8 @@ nav ul li a {
     background-color: #343a40;
     color: #fff;
     font-weight: 700;
-    text-transform: uppercase; /* Capitalize headings */
-    letter-spacing: 1px; /* Add spacing to the header text */
+    text-transform: uppercase;
+    letter-spacing: 1px;
     text-align: center;
 }
 
@@ -275,11 +196,11 @@ nav ul li a {
 }
 
 .table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternating row color */
+    background-color: #f9f9f9;
 }
 
 .table tbody tr:hover {
-    background-color: #f1f1f1; /* Hover effect */
+    background-color: #f1f1f1;
 }
 
 .table td img {
@@ -299,18 +220,7 @@ nav ul li a {
     font-size: 1.2rem;
     color: #666;
     text-align: center;
-    font-style: italic; /* Optional caption styling */
-}
-
-
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the whole section */
-    z-index: -1; /* Puts the video behind the content */
+    font-style: italic;
 }
 
 .guides-section {
@@ -359,57 +269,52 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Container for the buttons */
 .navigation-buttons {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
-    margin-bottom: 20px; /* Space below the buttons */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-/* Button Style */
 .nav-button {
-    display: flex; /* Use flex to align items */
-    align-items: center; /* Center items vertically */
-    background: #f8f9fa; /* Light background color */
-    color: #343a40; /* Dark text color */
-    padding: 12px 20px; /* Space around text */
-    margin: 10px; /* Space between buttons */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Bold text */
-    text-transform: uppercase; /* Uppercase text */
-    text-decoration: none; /* Remove underline from links */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    cursor: pointer; /* Change cursor to pointer */
-    border: none; /* Remove default button border */
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    color: #343a40;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none;
 }
 
-/* Icon Style */
 .nav-icon {
-    margin-right: 8px; /* Space between icon and text */
-    font-size: 20px; /* Icon size */
-    color: #007bff; /* Icon color */
+    margin-right: 8px;
+    font-size: 20px;
+    color: #007bff;
 }
 
-/* Hover Effects */
 .nav-button:hover {
-    background: #e2e6ea; /* Darker background on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background: #e2e6ea;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
-/* Active State */
 .nav-button:active {
-    transform: scale(0.95); /* Slightly shrink when clicked */
+    transform: scale(0.95);
 }
 
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none; /* Hidden by default */
+    display: none;
     background-color: #007BFF;
     color: white;
     border: none;
@@ -417,9 +322,49 @@ nav ul li a {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    z-index: 1000; /* Ensures the button is above other elements */
+    z-index: 1000;
 }
 
 .back-to-top:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: calc(50% - 20px); /* Two projects per row */
+    }
+
+    .content-box {
+        padding: 20px;
+        max-width: 90%; /* Limit content box width */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 70vh; /* Reduced height on smaller screens */
+    }
+
+    .project {
+        width: calc(100% - 20px); /* One project per row */
+    }
+
+    .content-box h1 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .content-box p {
+        font-size: 0.9rem; /* Smaller paragraph size */
+    }
 }
