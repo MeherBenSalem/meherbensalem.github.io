@@ -41,10 +41,6 @@ header nav ul li a {
     font-weight: 500;
 }
 
-header nav ul li a:hover {
-    color: #bf76ff;
-}
-
 /* Project Section */
 .project-category {
     text-align: center;
