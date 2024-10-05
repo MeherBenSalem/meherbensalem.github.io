@@ -7,9 +7,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+    position: relative; /* Ensures content appears above video */
 }
 
 header {
@@ -17,8 +16,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure header appears above the video */
+    position: relative;
 }
 
 header .logo {
@@ -41,10 +42,23 @@ header nav ul li a {
     font-weight: 500;
 }
 
+/* Fullscreen background video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Send the video behind the content */
+}
+
 /* Project Section */
 .project-category {
     text-align: center;
     padding: 40px 20px;
+    position: relative; /* Position relative for z-index management */
+    z-index: 10; /* Ensure project section appears above video */
 }
 
 .project-title {
@@ -145,16 +159,6 @@ header nav ul li a {
 
 .btn-docs:hover {
     background-color: #5a6268;
-}
-
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the whole section */
-    z-index: -1; /* Puts the video behind the content */
 }
 
 .discord-link {

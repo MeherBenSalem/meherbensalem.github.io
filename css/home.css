@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
 }
 
 header {
@@ -15,6 +16,10 @@ header {
     padding: 20px 50px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
@@ -39,31 +44,33 @@ header nav ul li a {
 
 .hero {
     height: 100vh;
-    background: url('your-pattern-background-url.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Allow absolutely positioned elements inside */
+    position: relative;
+    margin-top: 80px; /* Offset for the fixed header */
+    overflow: hidden;
 }
 
 .background-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .content-box {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     color: white;
     text-align: center;
     max-width: 600px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 10px;
 }
 
 .content-box h1 {
@@ -76,23 +83,19 @@ header nav ul li a {
     margin-bottom: 30px;
 }
 
-.content-box button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #5865F2; 
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.youtube-video {
+    margin-bottom: 20px;
 }
 
-.content-box button:hover {
-    background-color: #404EED;
+.content-box a.discord-link {
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .discord-link {
     color: #5865F2;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .discord-link:hover {
@@ -130,6 +133,11 @@ header nav ul li a {
     .content-box p {
         font-size: 1rem;
     }
+
+    .youtube-video iframe {
+        width: 100%; /* Ensure video adjusts to smaller screen width */
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -147,5 +155,10 @@ header nav ul li a {
 
     .content-box p {
         font-size: 0.9rem;
+    }
+
+    .youtube-video iframe {
+        width: 100%;
+        height: auto;
     }
 }
