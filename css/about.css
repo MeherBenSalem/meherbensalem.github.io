@@ -1,0 +1,381 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+    position: relative; /* Ensures content appears above video */
+    height: 100vh; /* Ensure body takes full height */
+}
+
+/* Background video styles */
+.background-video {
+    position: fixed; /* Fixes the video so it stays while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    object-fit: cover; /* Ensures the video covers the area while maintaining aspect ratio */
+    z-index: -1; /* Send video behind content */
+}
+
+/* Example header and content on top of the video */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure header appears above the video */
+    position: relative;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items */
+        padding: 10px 20px; /* Reduced padding */
+    }
+
+    header .logo {
+        font-size: 20px; /* Adjust logo size */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items */
+        margin-top: 10px; /* Spacing between logo and nav */
+    }
+
+    header nav ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.about-wrapper{
+    height: 100vh;
+}
+.about-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color:#fff
+}
+.about-left-content > div{
+    background: rgba(18, 25, 44, 0.5); /* Semi-transparent background */
+    padding: 4rem 4rem 2.5rem 5rem;
+    text-align: center;
+
+    border-radius: 12px 12px 0 0;
+}
+.about-left-content{
+    background: rgba(18, 25, 44, 0.5); /* Semi-transparent background */
+    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    border-radius: 12px;
+    width:80%;
+}
+.about-img img{
+    display: block;
+    width: 200px;
+}
+.about-img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.shadow{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.about-left-content h2{
+    font-size: 2rem;
+    margin: 2.2rem 0 0.6rem 0;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #B721FF;
+}
+.about-left-content h3{
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 1.2rem;
+}
+.icons{
+    background: #12192c;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    border-radius: 0 0 12px 12px;
+}
+.icons li{
+    list-style-type: none;
+    background: #B721FF;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.icons li:hover{
+    background: #edffec;
+    color: #000;
+}
+.about-right{
+    background: rgba(18, 25, 44, 0.5); /* Semi-transparent background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+    text-align: center;
+    color:#fff
+}
+.about-right h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.about-right h1 span{
+    color: #B721FF;
+}
+.about-right h2{
+    font-weight: 600;
+}
+.about-btns{
+    display: flex;
+    margin: 2rem 0;
+}
+.btn{
+    border: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 0.55rem 0;
+    width: 130px;
+    font-weight: 600;
+    background: transparent;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color:#fff
+}
+.btn.btn-pink{
+    background: #B721FF;
+    color: #fff;
+    border-color: #B721FF;
+    transition: all 0.5s ease-in-out;
+}
+.btn.btn-pink:hover{
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+.btn.btn-white{
+    transition: all 0.5s ease-in-out;
+}
+.btn.btn-white:hover{
+    background: #B721FF;
+    border-color: #B721FF;
+    color: #fff;
+}
+.about-para p{
+    font-weight: 300;
+    padding: 0.5rem;
+    opacity: 0.8;
+}
+
+.badges-container {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    justify-content: center; /* Center badges horizontally */
+    align-items: center; /* Align badges vertically in the center */
+    position: relative; /* Set to relative for positioning */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.badge-image {
+    width: 70px; /* Set the badge size */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure the badge appears above other content */
+    margin: 0 10px; /* Add horizontal margin between badges */
+}
+
+/* Responsive adjustments for badge images */
+@media screen and (max-width: 768px) {
+    .badge-image {
+        width: 15%; /* Adjust badge size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .badge-image {
+        width: 20%; /* Further adjust badge size for extra-small screens */
+    }
+}
+
+
+/* Responsive adjustments for badge images */
+@media screen and (max-width: 768px) {
+    .badge-image {
+        width: 15%; /* Increase badge size for smaller screens */
+    }
+
+    .badge-1, .badge-2, .badge-3 {
+        left: 5%; /* Align badges closer for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .badge-image {
+        width: 20%; /* Further increase badge size for extra-small screens */
+    }
+    
+    .badge-1 {
+        left: 0; /* Adjust position to fit small screens */
+    }
+
+    .badge-2 {
+        left: 20%; /* Adjust position to fit small screens */
+    }
+
+    .badge-3 {
+        left: 40%; /* Adjust position to fit small screens */
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .about-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .about-left{
+        position: relative;
+    }
+    .about-left-content{
+        position: absolute;
+        width:80%
+    
+    }
+}
+.credit{
+    text-align: center;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.credit a{
+    text-decoration: none;
+    color:#B721FF;
+    font-weight: bold;
+}
+
+.about-right {
+    position: relative;
+    padding: 20px; /* Added padding for overall spacing */
+}
+
+.contact-card {
+    background-color: #ffffff; /* White background for contrast */
+    border: 2px solid #007bff; /* Darker blue border for emphasis */
+    border-radius: 15px; /* More rounded corners */
+    padding: 30px; /* Increased padding for spaciousness */
+    margin-top: 40px; /* Increased space between buttons and card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    max-width: 400px; /* Maximum width of the card */
+    margin-left: auto; /* Center the card horizontally */
+    margin-right: auto; /* Center the card horizontally */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.contact-card h3 {
+    margin-top: 0;
+    color: #343a40;
+    font-size: 1.75em;
+}
+
+.contact-card p {
+    margin: 15px 0; /* Space between paragraphs */
+    font-size: 1.2em; /* Slightly larger text for readability */
+    line-height: 1.5; /* Increased line height for better readability */
+}
+
+.contact-card {
+    background-color: #ffffff; /* Optional: white background for better contrast */
+    border: 1px solid #ddd; /* Optional: border for definition */
+    border-radius: 8px; /* Optional: rounded corners */
+    padding: 20px; /* Optional: padding for inner spacing */
+    margin-top: 20px;
+}
+
+.contact-card p {
+    color: black; /* Make the paragraph text black */
+}
+
+.contact-card i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Slightly larger icon size */
+}
+
+.contact-card p {
+    display: flex; 
+}
+
