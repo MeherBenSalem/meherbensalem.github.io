@@ -133,12 +133,12 @@
                                         <div class="intro1">
                                             <ul>
                                                 <li><strong>Project Name: </strong>Ascendant Mobs</li>
-                                                <li><strong>Version: </strong> v0.8.0</li>
+                                                <li><strong>Version: </strong> v0.9.0</li>
                                                 <li><strong>Author: </strong> Naizo</li>
                                                 <li><strong>License: </strong>ARR</li>
                                             </ul>
                                         </div>
-                
+
                                         <hr>
                                         <div>
                                             <p>First of all, thank you so much for taking the time to explore the
@@ -151,7 +151,7 @@
                                                 Please review it carefully to understand how this mod enhances your
                                                 Minecraft experience.
                                             </p>
-                
+
                                             <div class="intro2 clearfix">
                                                 <h4>Important Note</h4>
                                                 <p><i class="fa fa-exclamation-triangle"></i> Be mindful of editing the
@@ -159,7 +159,7 @@
                                                     behavior.
                                                 </p>
                                             </div>
-                
+
                                             <h4>Requirements</h4>
                                             <p>You'll need the following software to customize this mod:</p>
                                             <ol>
@@ -205,8 +205,8 @@
                                     <li><strong>random</strong>: Applies random scaling.</li>
                                     <li><strong>MOTP</strong>: Uses <a
                                             href="https://www.curseforge.com/minecraft/mc-mods/memories-of-the-past">MOTP
-                                            - Leveling System </a> 
-                                        </li>
+                                            - Leveling System </a>
+                                    </li>
                                 </ul>
                                 <p>The <strong>day_factor</strong> affects how day/night cycles influence mob levels,
                                     while <strong>random_min</strong> and <strong>random_max</strong> set the bounds for
@@ -301,6 +301,7 @@
                                     ["Advanced Behaviour"]
                                     leader_radius = 30.0
                                     toggle_leadership = true
+                                    leader_extra_xp = 1.2
                                     </pre>
                                 <p>This section configures advanced behavior for mobs:</p>
                                 <ul>
@@ -308,6 +309,7 @@
                                     </li>
                                     <li><strong>toggle_leadership</strong>: Enable or disable leadership mechanics for
                                         mobs.</li>
+                                    <li><strong>leader_extra_xp</strong>: leaders extra xp multiplier (basexp * leader_extra_xp)</li>
                                 </ul>
 
                                 <p>By configuring these settings, you can fine-tune the behavior and scaling of mobs
@@ -327,6 +329,7 @@
                                 death_messages = []
                                 # Please respect this format 'xxx/namespace:mobname' where xxx is the level written in 3 digits. For example '010/minecraft:zombie'
                                 locked_mobs = ["100/minecraft:ender_dragon", "150/minecraft:wither"]
+                                only_leaders = ["minecraft:zombie", "minecraft:skeleton"]
                                 </pre>
                                 <p>The blacklist configuration includes the following options:</p>
                                 <ul>
@@ -345,6 +348,9 @@
                                         </ul>
                                         This feature is useful for maintaining the intended difficulty for specific boss
                                         mobs.
+                                    </li>
+                                    <li><strong>only_leaders</strong>: Use this setting to make only specific mobs
+                                        becomes leaders
                                     </li>
                                 </ul>
 
