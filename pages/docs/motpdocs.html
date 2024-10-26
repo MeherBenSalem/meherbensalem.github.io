@@ -111,8 +111,9 @@
                             <li><a href="#intro">Introduction</a></li>
                             <li><a href="#MainConfig">Main Config</a></li>
                             <li><a href="#drop_rate">Drop Rate Configuration</a></li>
-                            <li><a href="#rewards_config">Levelup Rewards</a></ ali>
+                            <li><a href="#rewards_config">Levelup Rewards</a></li>
                             <li><a href="#attributes_config">Customize Attributes</a></li>
+                            <li><a href="#nbt">NBT Tags</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -130,7 +131,7 @@
                                             <ul>
                                                 <li><strong>Project Name: </strong>Memories of the Past - RPG leveling
                                                     system</li>
-                                                <li><strong>Version: </strong> v0.10.0</li>
+                                                <li><strong>Version: </strong> v0.11.0</li>
                                                 <li><strong>Author: </strong>NAIZO</li>
                                                 <li><strong>License: </strong>ARR</li>
                                             </ul>
@@ -239,6 +240,8 @@
                                     scale_factor = 30.0
                                     points_per_level = 1.0
                                     enableDrops = true
+                                    onDeathReset = false
+                                    maxPlayerLevel = 500.0
                                 </pre>
                                 <p>These settings define how experience is awarded and how levels are scaled in your
                                     mod.</p>
@@ -266,6 +269,10 @@
                                         drops are enabled upon leveling or not. Setting this to
                                     <strong>true</strong> allows players to receive drops of knowledge from mods when they die</li>
                                         else it will automatically claim the xp.
+
+                                    <li><strong>onDeathReset</strong>: This setting indicates if the stats reset when the player dies</li>
+
+                                    <li><strong>maxPlayerLevel</strong>: Max level the player can reach</li>
                                 </ul>
 
                                 <h4 id="config_4">Initial Starting Values</h4>
@@ -423,6 +430,20 @@
                             # Type 'param=XXX' no extra spaces after the last digit
                         </pre>
                         <p>This section configures the attributes that players can enhance in the game. The <strong>Enable</strong> flag allows or disallows the attribute system. Each attribute has a <strong>display_name</strong> for in-game representation, a list of commands (<strong>cmd_to_exc</strong>) that can be executed to set the attribute value (where <em>(variable)</em> MUST be present to change the attirbute level based on the config value in the MainConfig.toml), and a <strong>tip_to_display</strong> that provides additional information to the player.</p>
+                    </section>
+
+                    <section>
+                        <h4 id="nbt">NBT Tags</h4>
+                        <pre class="brush: html">
+                            motp_att_1: Represents the player's first attribute
+                            motp_att_2: Represents the player's second attribute
+                            motp_att_3: Represents the player's third attribute
+                            motp_att_4: Represents the player's forth attribute
+                            motp_att_5: Represents the player's fifth attribute
+                            motp_att_6: Represents the player's sixth attribute
+                            motp_att_7: Represents the player's seventh attribute
+                            motp_level: Represents the player's level
+                        </pre>
                     </section>
                                    
                 </div>
