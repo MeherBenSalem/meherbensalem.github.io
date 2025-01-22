@@ -1,0 +1,53 @@
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* General Layout and Styling */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Animation for fade-in effect */
+.mainflex .main1,
+.main2,
+.main5 {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Delay each section's animation incrementally */
+.mainflex .main1 {
+    animation-delay: 0.3s;
+}
+
+/* Staggered fade-in for the features */
+.main2_feature {
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Hover effect on each feature */
+.main2_feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the "Who Am I" section */
+.main5_admins_description_div {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+    animation-delay: 3s; /* Slight delay for this section */
+}
+
+/* Staggered fade-in for social media and contact info */
+.footer_socials, .footer_contact {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}

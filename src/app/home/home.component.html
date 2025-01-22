@@ -1,0 +1,123 @@
+<head>
+  <link rel="icon" type="image/png" href="media/favicon.png">
+  <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <app-navbar></app-navbar>
+  <div class="mainflex">
+    <div class="main1">
+      <a class="main1_logo_a" href="#">
+        <img class="main1_logo" src="media/logo.png" alt="logo">
+      </a>
+      <a href="#more" class="scroll">
+        <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+      </a>
+      <script>
+        const scrollLinks = document.querySelectorAll('.scroll');
+        scrollLinks.forEach(function (link) {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            const offsetTop = target.offsetTop;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          });
+        });
+      </script>
+    </div>
+    <div id="more"></div>
+    <div class="main2">
+      <a class="headline">What Are My Projects?</a>
+      <div class="main2_features_div">
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/mods/mythiclogo.png">
+          <a class="main2_feature_headline">Mythic RPG : Reborn Realms</a>
+          <a class="main2_feature_text">An RPG modpack that transforms the game into a vibrant, story-driven fantasy
+            adventure
+            <br><br><img src="https://img.shields.io/curseforge/dt/1181031">
+          </a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/mods/AmLogo.png">
+          <a class="main2_feature_headline">AM - RPG Mobs Leveling System</a>
+          <a class="main2_feature_text">Every mob has the potential to grow stronger, smarter, and more dangerous as
+            they gain levels
+            <br><br><img src="https://img.shields.io/curseforge/dt/1088344">
+          </a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/mods/motplogo.png">
+          <a class="main2_feature_headline">MOTP - RPG Player Leveling System</a>
+          <a class="main2_feature_text">To create a unique leveling system in Minecraft
+            <br><br><img src="https://img.shields.io/curseforge/dt/1079687">
+          </a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/mods/lootbagslogo.jpg">
+          <a class="main2_feature_headline">Mob Loot Bags</a>
+          <a class="main2_feature_text">With each mob you defeat, you have a chance to receive a loot bag containing
+            valuable rewards
+            <br><br><img src="https://img.shields.io/curseforge/dt/1093276">
+          </a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/mods/FineTunedIcon.png">
+          <a class="main2_feature_headline">Finetuned Weaponry
+          </a>
+          <a class="main2_feature_text">Minecraft mod that brings unparalleled depth to combat! Whether you’re a casual
+            adventurer or a seasoned warrior
+            <br><br><img src="https://img.shields.io/curseforge/dt/1150827">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="about"></div>
+    <div class="main5">
+      <a class="headline">Who Am I ?</a>
+      <div class="main5_admin_div">
+        <div class="main5_admins_div main5_admins_dev_type2">
+          <img class="main5_admins_img" alt="admin member img" src="media/MeherBenSalem.jpg"
+            style="margin-right: 20px;">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Meher Ben Salem]</a>
+            <a class="main5_admins_description_title">NAIZO</a>
+            <a class="main5_admins_description">
+              Hi, I'm Meher Ben Salem, a passionate developer. I specialize in modding and creating custom RPG
+              experiences for Minecraft, such as my projects like 'MOTP' and 'Ascendant Mobs' I love experimenting with
+              code to bring new gameplay mechanics and features to life. When I'm not coding, I enjoy gaming and
+              collaborating with the community to make games more engaging and fun!
+            </a>
+
+            <div class="footer_socials">
+              <a href="https://x.com/real_naizo" class="footer_social_button" target="_blank">
+                <img src="media/twitter-icon.png" alt="Twitter" class="footer_social_icon">
+              </a>
+              <a href="https://github.com/MeherBenSalem" class="footer_social_button" target="_blank">
+                <img src="media/github-icon.png" alt="GitHub" class="footer_social_icon">
+              </a>
+              <a href="https://www.instagram.com/m3her.bs/" class="footer_social_button" target="_blank">
+                <img src="media/instagram-icon.png" alt="Instagram" class="footer_social_icon">
+              </a>
+              <a href="https://discord.com/invite/SAmd9fhNhr" class="footer_social_button" target="_blank">
+                <img src="media/discord-icon.png" alt="Discord" class="footer_social_icon">
+              </a>
+            </div>
+
+            <div class="footer_contact">
+              <h3>Contact Information</h3>
+              <p>Email: <a href="mailto:mahourabensalem@gmail.com"
+                  class="footer_contact_link">mahourabensalem&#64;gmail.com</a></p>
+              <p>Phone: <a href="tel:+21629972339" class="footer_contact_link">+216 29 972 339</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <app-footer></app-footer>
+</body>

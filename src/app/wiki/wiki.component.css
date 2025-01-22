@@ -1,0 +1,225 @@
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* General Layout and Styling */
+.wiki {
+    background: rgba(0, 0, 0, .5) url('/media/wikibg.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 40px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+}
+
+.headline {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* General Layout and Styling for the Projects */
+.main2_features_div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 projects per row */
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1024px) {
+    .main2_features_div {
+        grid-template-columns: repeat(2, 1fr); /* 2 projects per row for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .main2_features_div {
+        grid-template-columns: 1fr; /* 1 project per row on mobile */
+    }
+}
+
+/* Add animation to each project card */
+.main2_feature {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Delay each card's animation incrementally */
+.main2_feature:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.main2_feature:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.main2_feature:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.main2_feature:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+/* Hover effect on each feature */
+.main2_feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.main2_feature_img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main2_feature_headline {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main2_feature_text {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 20px; /* Adequate space between buttons */
+    margin-top: 30px;
+    width: 80%; /* Adjust the width to give some padding around the buttons */
+    max-width: 400px; /* Max width for buttons container */
+    align-items: center; /* Align buttons in the center */
+}
+
+.feature-btn {
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    width: 100%; /* Full width for stacked buttons */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Unique Button Styles */
+.btn-curseforge {
+    background: linear-gradient(145deg, #ff7f50, #ff6347); /* Coral gradient */
+}
+
+.btn-modrinth {
+    background: linear-gradient(145deg, #32cd32, #228b22); /* Lime green gradient */
+}
+
+.btn-documentation {
+    background: linear-gradient(145deg, #1e90ff, #4682b4); /* Sky blue gradient */
+}
+
+/* Hover Effects */
+.feature-btn:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.btn-curseforge:hover {
+    background: linear-gradient(145deg, #ff6347, #ff7f50); /* Reverse gradient */
+}
+
+.btn-modrinth:hover {
+    background: linear-gradient(145deg, #228b22, #32cd32); /* Reverse gradient */
+}
+
+.btn-documentation:hover {
+    background: linear-gradient(145deg, #4682b4, #1e90ff); /* Reverse gradient */
+}
+
+/* Focus and Active States */
+.feature-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.8); /* Focus ring for accessibility */
+}
+
+.feature-btn:active {
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Navbar Styling */
+app-navbar {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+app-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 28px;
+    }
+
+    .main2_feature {
+        padding: 20px;
+    }
+
+    .main2_feature_headline {
+        font-size: 18px;
+    }
+
+    .main2_feature_text {
+        font-size: 13px;
+    }
+
+    .feature-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
