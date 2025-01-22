@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px; /* Offset for the fixed header */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content-box {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 10px;
+}
+
+.content-box h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.youtube-video {
+    margin-bottom: 20px;
+}
+
+.content-box a.discord-link {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.discord-link {
+    color: #5865F2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.discord-link:hover {
+    color: #404EED;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .content-box {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .content-box h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-box p {
+        font-size: 1rem;
+    }
+
+    .youtube-video iframe {
+        width: 100%; /* Ensure video adjusts to smaller screen width */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    .content-box h1 {
+        font-size: 2rem;
+    }
+
+    .content-box p {
+        font-size: 0.9rem;
+    }
+
+    .youtube-video iframe {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,225 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+    position: relative; /* Ensures content appears above video */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure header appears above the video */
+    position: relative;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Fullscreen background video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Send the video behind the content */
+}
+
+/* Project Section */
+.project-category {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative; /* Position relative for z-index management */
+    z-index: 10; /* Ensure project section appears above video */
+}
+
+.project-title {
+    font-size: 2rem;
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-logo {
+    width: 50px;
+    height: 30px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Add spacing between cards */
+    margin-top: 30px;
+}
+
+.project {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px; /* Smaller width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.2rem; /* Smaller font */
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 0.9rem; /* Smaller font */
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem; /* Adjust button text size */
+}
+
+.btn i {
+    font-size: 1rem;
+}
+
+.btn-curseforge {
+    background-color: #f16436;
+}
+
+.btn-curseforge:hover {
+    background-color: #d65431;
+}
+
+.btn-modrinth {
+    background-color: #3ecf8e;
+}
+
+.btn-modrinth:hover {
+    background-color: #35b97c;
+}
+
+.btn-docs {
+    background-color: #6c757d;
+}
+
+.btn-docs:hover {
+    background-color: #5a6268;
+}
+
+.discord-link {
+    color: #5865F2;
+    font-weight: bold;
+}
+
+.discord-link:hover {
+    color: #404EED;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items */
+        padding: 10px 20px; /* Reduced padding */
+    }
+
+    header .logo {
+        font-size: 20px; /* Adjust logo size */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items */
+        margin-top: 10px; /* Spacing between logo and nav */
+    }
+
+    header nav ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    .project {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Max width for project cards */
+    }
+
+    .project-title {
+        font-size: 1.5rem; /* Adjust title size */
+    }
+
+    .btn {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 6px; /* Reduced padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 1.2rem; /* Further adjust title size */
+    }
+
+    .project h3 {
+        font-size: 1rem; /* Smaller heading */
+    }
+
+    .project p {
+        font-size: 0.8rem; /* Smaller paragraph */
+    }
+
+    .project {
+        padding: 15px; /* Reduce padding */
+    }
+}
