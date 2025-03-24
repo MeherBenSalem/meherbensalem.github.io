@@ -6,22 +6,20 @@
     <title>NAIZO Mods</title>
     <link rel="stylesheet" href="../css/mods.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img style="width: 100px;" src="../images/Logo.png">
+        <img src="../images/Logo.png" alt="Naizo Logo" class="logo">
         <nav>
-            <ul>
-                <li><a href="https://meherbensalem.github.io/index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="https://meherbensalem.github.io/pages/about.html"><i class="fas fa-user"></i> About Me</a></li>
-                <li><a href="https://meherbensalem.github.io/pages/projects.html"><i class="fas fa-briefcase"></i> My
-                        Projects</a></li>
-                <li><a href="https://meherbensalem.github.io/pages/mods.html"><i class="fas fa-gamepad"></i> My Mods</a>
-                </li>
-                <li><a class="discord-link" href="https://discord.gg/SAmd9fhNhr" target="_blank"><i
-                            class="fab fa-discord"></i> Discord Server</a></li>
+            <ul class="nav-links">
+                <li><a href="https://meherbensalem.github.io/index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="https://meherbensalem.github.io/pages/about.html"><i class="fas fa-user"></i></a></li>
+                <li><a href="https://meherbensalem.github.io/pages/projects.html"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="https://meherbensalem.github.io/pages/mods.html"><i class="fas fa-gamepad"></i></a></li>
+                <li><a href="https://discord.gg/SAmd9fhNhr" target="_blank" class="discord-link"><i class="fab fa-discord"></i></a></li>
             </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
@@ -30,84 +28,74 @@
         Your browser does not support the video tag.
     </video>
 
-    <section class="project-category">
-        <h2 class="project-title">
-            Minecraft Mods
-        </h2>
-    
-        <div class="project-grid">
+    <main>
+        <section class="mods-section">
+            <h1 class="section-title">Minecraft Mods</h1>
+            <div class="mods-grid">
+                <div class="mod-card">
+                    <img src="../images/mods/AmLogo.png" alt="AM - RPG Mobs" class="mod-img">
+                    <h2>AM - RPG Mobs Leveling System</h2>
+                    <img src="https://img.shields.io/curseforge/dt/1088344" alt="Downloads" class="badge">
+                    <p>Mobs grow stronger and smarter as they level up.</p>
+                    <div class="mod-links">
+                        <a href="https://www.curseforge.com/minecraft/mc-mods/ascendant-mobs" target="_blank" class="btn btn-curseforge"><i class="fas fa-download"></i> CurseForge</a>
+                        <a href="https://modrinth.com/mod/ascendant-mobs" target="_blank" class="btn btn-modrinth"><i class="fas fa-download"></i> Modrinth</a>
+                        <a href="https://drive.google.com/file/d/1Gwdd55CVVIQw-p7AmKBkxG65qQOov7xX/view?usp=drive_link" target="_blank" class="btn btn-docs"><i class="fas fa-book"></i> Docs</a>
+                    </div>
+                </div>
 
-            <div class="project">
-                <img src="../images/mods/AmLogo.png" alt="Mod Project 1" class="project-img">
-                <h3>AM - RPG Mobs Leveling System</h3>
-                <img src="https://img.shields.io/curseforge/dt/1088344"/>
-                <p>Every mob has the potential to grow stronger, smarter, and more dangerous as they gain levels</p>
-                <div class="project-links">
-                    <a href="https://www.curseforge.com/minecraft/mc-mods/ascendant-mobs" target="_blank" class="btn btn-curseforge">
-                        <i class="fas fa-download"></i> Download on CurseForge
-                    </a>
-                    <a href="https://modrinth.com/mod/ascendant-mobs" target="_blank" class="btn btn-modrinth">
-                        <i class="fas fa-download"></i> Download on Modrinth
-                    </a>
-                    <a href="https://drive.google.com/file/d/1Gwdd55CVVIQw-p7AmKBkxG65qQOov7xX/view?usp=drive_link" target="_blank" class="btn btn-docs">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
+                <div class="mod-card">
+                    <img src="../images/mods/motplogo.png" alt="MOTP - RPG Player" class="mod-img">
+                    <h2>MOTP - RPG Player Leveling</h2>
+                    <img src="https://img.shields.io/curseforge/dt/1079687" alt="Downloads" class="badge">
+                    <p>A unique leveling system for players.</p>
+                    <div class="mod-links">
+                        <a href="https://www.curseforge.com/minecraft/mc-mods/memories-of-the-past" target="_blank" class="btn btn-curseforge"><i class="fas fa-download"></i> CurseForge</a>
+                        <a href="https://modrinth.com/mod/memories-of-the-past" target="_blank" class="btn btn-modrinth"><i class="fas fa-download"></i> Modrinth</a>
+                        <a href="https://drive.google.com/file/d/1gYa6acks92jkdI2qrdhr1p-c2Qo4EKs7/view?usp=sharing" target="_blank" class="btn btn-docs"><i class="fas fa-book"></i> Docs</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project">
-                <img src="../images/mods/motplogo.png" alt="Mod Project 3" class="project-img">
-                <h3>MOTP - RPG Player Leveling System</h3>
-                <img src="https://img.shields.io/curseforge/dt/1079687"/>
-                <p>To create a unique leveling system in Minecraft</p>
-                <div class="project-links">
-                    <a href="https://www.curseforge.com/minecraft/mc-mods/memories-of-the-past" target="_blank" class="btn btn-curseforge">
-                        <i class="fas fa-download"></i> Download on CurseForge
-                    </a>
-                    <a href="https://modrinth.com/mod/memories-of-the-past" target="_blank" class="btn btn-modrinth">
-                        <i class="fas fa-download"></i> Download on Modrinth
-                    </a>
-                    <a href="https://drive.google.com/file/d/1gYa6acks92jkdI2qrdhr1p-c2Qo4EKs7/view?usp=sharing" target="_blank" class="btn btn-docs">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
+                <div class="mod-card">
+                    <img src="../images/mods/lootbagslogo.jpg" alt="Mob Loot Bags" class="mod-img">
+                    <h2>Mob Loot Bags</h2>
+                    <img src="https://img.shields.io/curseforge/dt/1093276" alt="Downloads" class="badge">
+                    <p>Chance to get loot bags from defeated mobs.</p>
+                    <div class="mod-links">
+                        <a href="https://www.curseforge.com/minecraft/mc-mods/mob-loot-bags" target="_blank" class="btn btn-curseforge"><i class="fas fa-download"></i> CurseForge</a>
+                        <a href="https://modrinth.com/mod/mob-loot-bags" target="_blank" class="btn btn-modrinth"><i class="fas fa-download"></i> Modrinth</a>
+                        <a href="https://meherbensalem.github.io/pages/docs/Lbdocs.html" target="_blank" class="btn btn-docs"><i class="fas fa-book"></i> Docs</a>
+                    </div>
+                </div>
+
+                <div class="mod-card">
+                    <img src="../images/mods/FineTunedIcon.png" alt="Finetuned Weaponry" class="mod-img">
+                    <h2>Finetuned Weaponry</h2>
+                    <img src="https://img.shields.io/curseforge/dt/1150827" alt="Downloads" class="badge">
+                    <p>Deepens combat for all adventurers.</p>
+                    <div class="mod-links">
+                        <a href="https://www.curseforge.com/minecraft/mc-mods/fine-tunned-weaponry" target="_blank" class="btn btn-curseforge"><i class="fas fa-download"></i> CurseForge</a>
+                        <a href="https://modrinth.com/mod/fine-tunned-weaponry" target="_blank" class="btn btn-modrinth"><i class="fas fa-download"></i> Modrinth</a>
+                    </div>
+                </div>
+
+                <div class="mod-card">
+                    <img src="../images/mods/ossukage.gif" alt="Remnant: Ossukage" class="mod-img">
+                    <h2>Remnant: Ossukage</h2>
+                    <img src="https://img.shields.io/curseforge/dt/1225026" alt="Downloads" class="badge">
+                    <p>Face a deadly skeletal entity.</p>
+                    <div class="mod-links">
+                        <a href="https://www.curseforge.com/minecraft/mc-mods/remnant-ossukage" target="_blank" class="btn btn-curseforge"><i class="fas fa-download"></i> CurseForge</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="project">
-                <img src="../images/mods/lootbagslogo.jpg" alt="Mod Project 2" class="project-img">
-                <h3>Mob Loot Bags</h3>
-                <img src="https://img.shields.io/curseforge/dt/1093276"/>
-                <p>With each mob you defeat, you have a chance to receive a loot bag containing valuable rewards</p>
-                <div class="project-links">
-                    <a href="https://www.curseforge.com/minecraft/mc-mods/mob-loot-bags" target="_blank" class="btn btn-curseforge">
-                        <i class="fas fa-download"></i> Download on CurseForge
-                    </a>
-                    <a href="https://modrinth.com/mod/mob-loot-bags" target="_blank" class="btn btn-modrinth">
-                        <i class="fas fa-download"></i> Download on Modrinth
-                    </a>
-                    <a href="https://meherbensalem.github.io/pages/docs/Lbdocs.html" target="_blank" class="btn btn-docs">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-            </div>
-            <div class="project">
-                <img src="../images/mods/FineTunedIcon.png" alt="Mod Project 2" class="project-img">
-                <h3>Finetuned Weaponry</h3>
-                <img src="https://img.shields.io/curseforge/dt/1150827"/>
-                <p>Minecraft mod that brings unparalleled depth to combat! Whether you’re a casual adventurer or a seasoned warrior</p>
-                <div class="project-links">
-                    <a href="https://www.curseforge.com/minecraft/mc-mods/fine-tunned-weaponry" target="_blank" class="btn btn-curseforge">
-                        <i class="fas fa-download"></i> Download on CurseForge
-                    </a>
-                    <a href="https://modrinth.com/mod/fine-tunned-weaponry" target="_blank" class="btn btn-modrinth">
-                        <i class="fas fa-download"></i> Download on Modrinth
-                    </a>
-                    <!-- <a href="https://meherbensalem.github.io/pages/docs/Lbdocs.html" target="_blank" class="btn btn-docs">
-                        <i class="fas fa-book"></i> Documentation
-                    </a> -->
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

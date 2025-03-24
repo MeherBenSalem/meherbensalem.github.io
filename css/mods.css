@@ -1,4 +1,16 @@
-/* General Reset */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056B3;
+    --accent-color: #5865F2;
+    --curseforge-color: #f16436;
+    --modrinth-color: #3ecf8e;
+    --docs-color: #6c757d;
+    --text-dark: #333;
+    --text-light: #fff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --background-light: #f5f5f5;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,42 +19,71 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
-    position: relative; /* Ensures content appears above video */
+    overflow-x: hidden;
+    position: relative;
+    background: var(--background-light);
+    color: var(--text-dark);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure header appears above the video */
-    position: relative;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-header nav ul {
-    list-style-type: none;
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
     display: flex;
+    list-style: none;
 }
 
-header nav ul li {
-    margin-left: 20px;
+.nav-links li {
+    margin: 0 1rem;
 }
 
-header nav ul li a {
+.nav-links a {
+    color: var(--text-dark);
     text-decoration: none;
-    color: #000;
-    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-/* Fullscreen background video */
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.discord-link {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.discord-link:hover {
+    color: #404EED;
+}
+
 .background-video {
     position: fixed;
     top: 0;
@@ -50,176 +91,194 @@ header nav ul li a {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1; /* Send the video behind the content */
+    z-index: -1;
+    filter: brightness(0.7);
 }
 
-/* Project Section */
-.project-category {
+.mods-section {
+    padding: 4rem 1rem 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-light);
     text-align: center;
-    padding: 40px 20px;
-    position: relative; /* Position relative for z-index management */
-    z-index: 10; /* Ensure project section appears above video */
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.project-title {
-    font-size: 2rem;
-    color: wheat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.mods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
-.project-logo {
-    width: 50px;
-    height: 30px;
+.mod-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
-.project-grid {
-    display: flex;
-    flex-wrap: wrap; /* Ensure cards wrap */
-    justify-content: center; /* Center the cards */
-    gap: 20px; /* Add spacing between cards */
-    margin-top: 30px;
+.mod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px; /* Smaller width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-}
-
-.project-img {
+.mod-img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.project h3 {
-    font-size: 1.2rem; /* Smaller font */
-    margin-bottom: 10px;
+.mod-card:hover .mod-img {
+    transform: scale(1.03);
 }
 
-.project p {
-    font-size: 0.9rem; /* Smaller font */
-    margin-bottom: 20px;
+.mod-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
 }
 
-.project-links {
+.badge {
+    margin: 0.5rem 0;
+    height: 20px;
+}
+
+.mod-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.mod-links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
 .btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px;
+    padding: 0.6rem 1rem;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-size: 0.9rem; /* Adjust button text size */
+    gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-.btn i {
-    font-size: 1rem;
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
 }
 
 .btn-curseforge {
-    background-color: #f16436;
+    background: var(--curseforge-color);
 }
 
 .btn-curseforge:hover {
-    background-color: #d65431;
+    background: #d65431;
 }
 
 .btn-modrinth {
-    background-color: #3ecf8e;
+    background: var(--modrinth-color);
 }
 
 .btn-modrinth:hover {
-    background-color: #35b97c;
+    background: #35b97c;
 }
 
 .btn-docs {
-    background-color: #6c757d;
+    background: var(--docs-color);
 }
 
 .btn-docs:hover {
-    background-color: #5a6268;
+    background: #5a6268;
 }
 
-.discord-link {
-    color: #5865F2;
-    font-weight: bold;
-}
-
-.discord-link:hover {
-    color: #404EED;
+.btn i {
+    font-size: 0.9rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack header items */
-        padding: 10px 20px; /* Reduced padding */
+        padding: 0.6rem 1rem;
     }
 
-    header .logo {
-        font-size: 20px; /* Adjust logo size */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 0.8rem;
+        box-shadow: var(--shadow);
     }
 
-    header nav ul {
-        flex-direction: column; /* Stack navigation items */
-        margin-top: 10px; /* Spacing between logo and nav */
+    .nav-links.active {
+        display: flex;
     }
 
-    header nav ul li {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 10px; /* Add bottom margin */
+    .menu-toggle {
+        display: block;
     }
 
-    .project {
-        width: 100%; /* Full width on smaller screens */
-        max-width: 300px; /* Max width for project cards */
+    .section-title {
+        font-size: 1.8rem;
     }
 
-    .project-title {
-        font-size: 1.5rem; /* Adjust title size */
-    }
-
-    .btn {
-        font-size: 0.8rem; /* Smaller button text */
-        padding: 6px; /* Reduced padding */
+    .mods-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
-    .project-title {
-        font-size: 1.2rem; /* Further adjust title size */
+    .logo {
+        width: 60px;
     }
 
-    .project h3 {
-        font-size: 1rem; /* Smaller heading */
+    .section-title {
+        font-size: 1.5rem;
     }
 
-    .project p {
-        font-size: 0.8rem; /* Smaller paragraph */
+    .mod-card {
+        padding: 1rem;
     }
 
-    .project {
-        padding: 15px; /* Reduce padding */
+    .mod-img {
+        height: 120px;
+    }
+
+    .mod-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .mod-card p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
     }
 }
